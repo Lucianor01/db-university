@@ -31,23 +31,3 @@ Query con SELECT
 8. Qual è il numero totale degli studenti iscritti? (5000)
 
     8. SELECT COUNT(`name`) AS `total_students` FROM `students`;
-
---------------------------------------------------------------------------------------------------------------------------------------------
-
-Query con GROUP BY 
-
-1. Contare i corsi raggruppati per cfu
-
-    1. SELECT `cfu`, COUNT(`id`) FROM `courses` GROUP BY `cfu`;
-
-2. Contare gli studenti raggruppati per anno di nascita
-
-    2. SELECT `date_of_birth`, COUNT(`id`) FROM `students` GROUP BY `date_of_birth`;
-
-3. Selezionare il voto più basso dato ad ogni appello d'esame
-
-    3. SELECT `exam_id`, MIN(`vote`) AS `lowest_vote` FROM `exam_student` GROUP BY `exam_id`;
-
-4. Contare gli appelli d'esame del mese di luglio raggruppati per giorno
-
-    4. SELECT DATE(`date`) as day, COUNT(*) as `total_exams` FROM `exams` WHERE MONTH(`date`) = 7 GROUP BY DATE(`date`); 
