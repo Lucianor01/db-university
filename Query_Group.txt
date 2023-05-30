@@ -6,7 +6,7 @@ Query con GROUP BY
 
 2. Contare gli studenti raggruppati per anno di nascita
 
-    2. SELECT `date_of_birth`, COUNT(`id`) FROM `students` GROUP BY `date_of_birth`;
+    2. SELECT COUNT(*) as `students_number`, YEAR(`date_of_birth`) FROM `students` GROUP BY YEAR(`date_of_birth`);
 
 3. Selezionare il voto più basso dato ad ogni appello d'esame
 
